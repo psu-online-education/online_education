@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Penn State Online Education theme.
+ */
+
+use Drupal\Component\Serialization\Json;
+
+require_once implode(DIRECTORY_SEPARATOR, [__DIR__, 'includes', 'online_education.preprocess.inc']);
+require_once implode(DIRECTORY_SEPARATOR, [__DIR__, 'includes', 'online_education.suggestions.inc']);
+
+/**
+ * Implements hook_library_info_build().
+ *
+ * Dynamically link the components into Drupal!
+ *
+ * for each component
+ *   create a library
+ *   if there is css, add it to the library
+ *   if there is js, add it to the library
+ *   if there are dependencies, declare them
+ * end component loop
+ */
+function online_education_library_info_build(): array {
+
+  $libraries = [];
+
+  /** @var \Drupal\Core\Extension\ThemeExtensionList $extension_theme_list */
+  $extension_theme_list = \Drupal::service('extension.list.theme');
+  $theme_path = $extension_theme_list->getPath('online_education');
+  $components_path = implode(DIRECTORY_SEPARATOR, [
+    $theme_path,
+    'upstream-components',
+  ]);
+  $components = new FilesystemIterator($components_path, FilesystemIterator::SKIP_DOTS);
+  foreach ($components as $component) {
+    if (!$component->isDir()) {
+      continue;
+    }
+
+    // Resolve javascript files.
+    $js_path = implode(DIRECTORY_SEPARATOR, [
+      $component->getPathname(),
+      'dist',
+      'scripts.js',
+    ]);
+    if (file_exists($js_path)) {
+      $libraries[$component->getFilename()]['js'] = [str_replace($theme_path . '/', '', $js_path) => []];
+    }
+
+    // Resolve CSS files.
+    $css_path = implode(DIRECTORY_SEPARATOR, [
+      $component->getPathname(),
+      'dist',
+      'styles.css',
+    ]);
+    if (file_exists($css_path)) {
+      $libraries[$component->getFilename()]['css']['component'] = [str_replace($theme_path . '/', '', $css_path) => []];
+    }
+
+    // Resolve dependencies.
+    $package_manifest = implode(DIRECTORY_SEPARATOR, [
+      $component->getPathname(),
+      'package.json',
+    ]);
+
+    if (file_exists($package_manifest)) {
+      $json = Json::decode(file_get_contents($package_manifest));
+      if (isset($json['dependencies'])) {
+        foreach ($json['dependencies'] as $dependency => $version) {
+          $dependency_library_name = str_replace('@psu-online-education', 'online_education', $dependency);
+          $libraries[$component->getFilename()]['dependencies'][] = $dependency_library_name;
+        }
+      }
+    }
+  }
+  return $libraries;
+}
+
+/**
+ * Implements hook_js_settings_alter().
+ */
+function online_education_js_settings_alter(array &$settings): void {
+
+  if (array_key_exists('onlineEducation', $settings) && array_key_exists('spinner_component', $settings['onlineEducation'])) {
+    $spinner = [
+      '#type' => 'inline_template',
+      '#template' => <<<TEMPLATE
+        {% include '@oe/spinner/spinner.twig' with {
+        loading_text: 'Loading...',
+        size: 'xsmall'
+      } only %}
+    TEMPLATE,
+    ];
+    $settings['onlineEducation']['spinner_component'] = \Drupal::service('renderer')->renderPlain($spinner);
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function online_education_page_attachments_alter(array &$attachments) {
+  if (\Drupal::currentUser()->hasPermission('access toolbar')) {
+    $attachments['#attached']['library'][] = 'online_education/admin-toolbar';
+  }
+}

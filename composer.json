@@ -1,0 +1,7 @@
+{
+    "name": "psu-online-education/online_education",
+    "description": "A drupal theme binding for the Penn State Online Education design system",
+    "type": "drupal-theme",
+    "minimum-stability": "stable",
+    "require": {}
+}

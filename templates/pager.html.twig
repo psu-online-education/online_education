@@ -1,0 +1,7 @@
+{{ attach_library('online_education/pager') }}
+{% include '@oe/pager/pager.twig' with {
+  heading_id: heading_id,
+  heading: 'Pagination',
+  items: items,
+  current: current
+} only %}

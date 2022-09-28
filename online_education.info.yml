@@ -1,0 +1,172 @@
+name: "Outreach and Online Education Base Theme"
+type: theme
+core_version_requirement: ^10 || ^11
+base theme: false
+regions:
+  disabled: "Disabled blocks"
+  announcements: "Announcements"
+  branding: "Site branding"
+  utility: "Utility bar"
+  segmentation: "Segmentation"
+  primary_nav: "Primary navigation"
+  before_content: "Before content"
+  content: "Content"
+  aside: "Aside"
+  after_content_all_viewports: "After content (all viewports)"
+  after_content_small_viewports: 'After content (small viewports only)'
+  floating: "Floating"
+  modal: "Modal"
+  footer_top_first: "Footer top (first)"
+  footer_top_second: "Footer top (second)"
+  footer_top_third: "Footer top (third)"
+  footer_middle_first: "Footer middle (first)"
+  footer_middle_second: "Footer middle (second)"
+  footer_middle_third: "Footer middle (third)"
+  footer_bottom: "Footer bottom"
+
+libraries:
+  - online_education/smooth-scroll
+
+libraries-extend:
+  core/drupal.ajax:
+    - online_education/ajax-progress-throbber
+  core/drupal.message:
+    - online_education/status-messages
+  clientside_validation_jquery/cv.jquery.validate:
+    - online_education/clientside-validation
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        css/components/align.module.css: false
+        css/components/autocomplete-loading.module.css: false
+        css/components/container-inline.module.css: false
+        css/components/fieldgroup.module.css: components/fieldgroup/dist/styles.css
+
+  claro/claro.jquery.ui:
+    css:
+      component:
+        css/components/jquery.ui/theme.css: false
+
+  core/internal.jquery_ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false
+
+  gin/dialog: false
+
+  search_api_autocomplete/search_api_autocomplete:
+    css:
+      theme:
+        css/search_api_autocomplete.css: false
+
+  core/drupal.autocomplete:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/autocomplete.css: components/autocomplete/dist/styles.css
+        assets/vendor/jquery.ui/themes/base/menu.css: false
+
+  webform/webform.element.color:
+    css:
+      component:
+        css/webform.element.color.css: false
+
+  webform/webform.element.help:
+    css:
+      component:
+        css/webform.element.help.css: components/webform-element-help/dist/styles.css
+    dependencies:
+      - online_education/sprite
+
+  webform/webform.element.counter:
+    css:
+      component:
+        css/webform.element.counter.css: false
+
+  webform/webform.element.more:
+    css:
+      component:
+        css/webform.element.more.css: components/webform-element-more/dist/styles.css
+    dependencies:
+      - online_education/sprite
+
+  webform/webform.element.options:
+    css:
+      component:
+        css/webform.element.options.css: false
+
+  webform/webform.composite:
+    css:
+      component:
+        css/webform.composite.css: false
+
+  webform/webform.element.message:
+    css:
+      component:
+        css/webform.element.message.css: false
+
+  webform/webform.element.message.info:
+    css:
+      component:
+        css/webform.element.message.info.css: false
+
+  webform/webform.element.rating:
+    css:
+      component:
+        css/webform.element.rating.css: false
+
+  webform/webform.element.flexbox:
+    css:
+      layout:
+        css/webform.element.flexbox.css: false
+
+  webform/webform.progress:
+    css:
+      component:
+        css/webform.progress.css: false
+
+  webform/webform.element.scale:
+    css:
+      component:
+        css/webform.element.scale.css: false
+
+  webform/webform.element.range: false
+
+  webform/webform.element.datelist:
+    css:
+      component:
+        css/webform.element.datelist.css: false
+
+  webform/webform.element.terms_of_service:
+    css:
+      component:
+        css/webform.element.terms_of_service.css: false
+    js:
+      js/webform.element.terms_of_service.js: false
+
+  webform/webform.element.term_checkboxes:
+    css:
+      component:
+        css/webform.element.term_checkboxes.css: false
+
+  webform/webform.element.details.toggle:
+    css:
+      component:
+        css/webform.element.details.toggle.css: components/webform-element-webform-details/dist/styles.css
+
+  webform_clientside_validation/webform_clientside_validation.ife:
+    js:
+      js/webform_clientside_validation.ife.js: false
+    css:
+      component:
+        css/webform_clientside_validation.ife.css: false
+
+components:
+  namespaces:
+    oe: "upstream-components"
+
+dependencies:
+  - components:components
+  - twig_tweak:twig_tweak
+
