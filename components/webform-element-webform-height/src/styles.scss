@@ -1,8 +1,8 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-type-webform-height {
   > legend {
-    margin-bottom: _rem(.5);
+    margin-bottom: oe.rem(.5);
   }
 
   > .fieldset-wrapper > .form--inline {

@@ -1,11 +1,11 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-datetime {
 
   > .form-item__element-wrapper > .form-item__element > .container-inline {
     display: flex;
     flex-flow: row wrap;
-    row-gap: _rem(1.5);
+    row-gap: oe.rem(1.5);
 
     > .form-item {
       flex: 0;

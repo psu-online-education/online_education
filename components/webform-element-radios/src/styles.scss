@@ -1,12 +1,12 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-type-radios {
 
   > legend {
-    margin-bottom: _rem(.8);
+    margin-bottom: oe.rem(.8);
   }
 
   > .fieldset-wrapper > .form-item--error-message {
-    margin-top: _rem(1.5);
+    margin-top: oe.rem(1.5);
   }
 }

@@ -1,8 +1,8 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-required .form-required-asterisk::after {
   content: '*';
-  margin-left: _rem(.5);
+  margin-left: oe.rem(.5);
   color: var(--form-required-indicator-color);
   font-family: var(--form-label-font-family);
   line-height: var(--line-height--nospace);

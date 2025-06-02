@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-type-webform-email-confirm {
 
@@ -12,7 +12,7 @@
     }
 
     > .form-item--error-message {
-      margin-top: _rem(.5);
+      margin-top: oe.rem(.5);
     }
   }
 }

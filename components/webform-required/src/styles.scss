@@ -1,8 +1,8 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-required {
   display: flex;
-  gap: _rem(.5);
+  gap: oe.rem(.5);
   font-weight: var(--font-weight--regular);
   color: var(--form-label-text-color);
   font-size: var(--form-label-font-size);

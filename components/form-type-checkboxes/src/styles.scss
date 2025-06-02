@@ -1,8 +1,8 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-checkboxes {
   display: flex;
-  gap: _rem(1.5) _rem(2.5);
+  gap: oe.rem(1.5) oe.rem(2.5);
   flex-flow: row wrap;
 
   & > .form-item {

@@ -1,9 +1,9 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-type-webform-select-other {
 
   > legend {
-    margin-bottom: _rem(.5);
+    margin-bottom: oe.rem(.5);
   }
 
   > .fieldset-wrapper {
@@ -12,14 +12,14 @@
     }
 
     > .webform-select-other-input {
-      margin-top: _rem(1.5);
+      margin-top: oe.rem(1.5);
       margin-bottom: 0;
 
       // Prevent JS from making things overflow.
       width: var(--form-element-width) !important;
 
       & + .form-item__description {
-        margin-top: _rem(.5);
+        margin-top: oe.rem(.5);
       }
     }
   }

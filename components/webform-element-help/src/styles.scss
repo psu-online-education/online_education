@@ -1,11 +1,11 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-element-help {
   color: var(--form-help-color);
   border: none;
-  width: _rem(2);
-  height: _rem(2);
-  font-size: _rem(2);
+  width: oe.rem(2);
+  height: oe.rem(2);
+  font-size: oe.rem(2);
   line-height: 0;
   vertical-align: middle;
 

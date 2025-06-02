@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-section-title {
   color: var(--form-label-text-color);
@@ -6,6 +6,6 @@
   // Make sure the required asterisk is the right size!
   &.form-required .form-required-asterisk::after {
     font-size: inherit;
-    margin-left: _rem(.5);
+    margin-left: oe.rem(.5);
   }
 }

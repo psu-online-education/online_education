@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-options-display-buttons-wrapper {
 
@@ -12,8 +12,8 @@
     align-items: center;
     text-align: center;
     margin: 0;
-    padding: var(--form-element-padding--vertical) _rem(2.5);
-    border: _rem(.1) solid var(--pa-link);
+    padding: var(--form-element-padding--vertical) oe.rem(2.5);
+    border: oe.rem(.1) solid var(--pa-link);
     background: var(--white);
     border-radius: var(--form-element-border-radius--rounded);
     font-family: var(--form-element-font-family);
@@ -26,7 +26,7 @@
 
 .webform-options-display-buttons {
   display: flex;
-  gap: _rem(1.5);
+  gap: oe.rem(1.5);
   flex-wrap: wrap;
 
   & > .webform-options-display-buttons-wrapper {
@@ -60,7 +60,7 @@
   input:checked + label {
     background-color: var(--nittany-navy);
     color: var(--white);
-    padding: calc(var(--form-element-padding--vertical) - _rem(.5)) _rem(2.5);
+    padding: calc(var(--form-element-padding--vertical) - oe.rem(.5)) oe.rem(2.5);
     --form-help-color: var(--pa-link-light);
 
     &::after {
@@ -70,7 +70,7 @@
       // @TODO: Keep an eye on the need for -webkit-mask.
       -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/1rem auto;
       mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/1rem auto;
-      height: _rem(1);
+      height: oe.rem(1);
     }
   }
 
@@ -109,8 +109,8 @@
   }
 
   input:focus-visible + label {
-    outline: _rem(.2) solid var(--sky-blue);
-    outline-offset: _rem(.2);
+    outline: oe.rem(.2) solid var(--sky-blue);
+    outline-offset: oe.rem(.2);
   }
 
   input:disabled {

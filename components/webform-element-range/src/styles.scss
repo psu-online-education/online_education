@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-range {
 
@@ -19,16 +19,16 @@
     // Add margin to account for the track thumb height.
     & > .form-item__element {
       position: relative;
-      margin: _rem(1) 0;
+      margin: oe.rem(1) 0;
 
       // Account for the additional height of the floating output.
       &:has(> output[data-display="below"]) {
-        margin-bottom: _rem(5.7);
+        margin-bottom: oe.rem(5.7);
       }
 
       // Account for the additional height of the floating output.
       &:has(> output[data-display="above"]) {
-        margin-top: _rem(5.5);
+        margin-top: oe.rem(5.5);
       }
 
       & > output {
@@ -45,32 +45,32 @@
           top: 100%;
 
           & > span {
-            top: calc(100% + _rem(.8) + (_rem(1) * #{'sqrt(2)'}));
+            top: calc(100% + oe.rem(.8) + (oe.rem(1) * #{'sqrt(2)'}));
 
             // Form an upward facing triangle.
             &::before {
-              border-bottom: calc(_rem(1) * #{'(sqrt(2) / 2)'}) solid var(--form-element-background-color);
-              border-left: calc(_rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
-              border-right: calc(_rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
+              border-bottom: calc(oe.rem(1) * #{'(sqrt(2) / 2)'}) solid var(--form-element-background-color);
+              border-left: calc(oe.rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
+              border-right: calc(oe.rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
               bottom: 100%;
-              margin-left: calc(_rem(-1) * #{'(sqrt(2) / 2)'});
+              margin-left: calc(oe.rem(-1) * #{'(sqrt(2) / 2)'});
             }
           }
         }
 
         &[data-display="above"] {
-          bottom: calc(100% + _rem(.4));
+          bottom: calc(100% + oe.rem(.4));
 
           & > span {
-            bottom: calc(100% + _rem(.2) + (_rem(1) * #{'sqrt(2)'}));
+            bottom: calc(100% + oe.rem(.2) + (oe.rem(1) * #{'sqrt(2)'}));
 
             // Form an downward facing triangle.
             &::before {
-              border-top: calc(_rem(1) * #{'(sqrt(2) / 2)'}) solid var(--form-element-background-color);
-              border-left: calc(_rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
-              border-right: calc(_rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
+              border-top: calc(oe.rem(1) * #{'(sqrt(2) / 2)'}) solid var(--form-element-background-color);
+              border-left: calc(oe.rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
+              border-right: calc(oe.rem(1) * #{'(sqrt(2) / 2)'}) solid transparent;
               top: 100%;
-              margin-left: calc(_rem(-1) * #{'(sqrt(2) / 2)'});
+              margin-left: calc(oe.rem(-1) * #{'(sqrt(2) / 2)'});
             }
           }
         }
@@ -79,7 +79,7 @@
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          padding: _rem(.8);
+          padding: oe.rem(.8);
           background-color: var(--form-element-background-color);
 
           &::before {

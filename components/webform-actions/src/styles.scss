@@ -1,10 +1,10 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-actions {
   margin-top: auto;
   display: flex;
   flex-wrap: nowrap;
-  gap: _rem(1);
+  gap: oe.rem(1);
   justify-content: space-between;
 
   &--wizard {
@@ -23,17 +23,17 @@
 
 .webform-button {
   min-width: fit-content;
-  width: _rem(17);
+  width: oe.rem(17);
   max-width: 50%;
-  padding-left: _rem(2);
-  padding-right: _rem(2);
+  padding-left: oe.rem(2);
+  padding-right: oe.rem(2);
 
   > .button__icon {
     font-size: var(--font-size--msmall);
 
     > .ajax-progress-throbber {
-      margin-right: _rem(-.6);
-      margin-top: _rem(-.1);
+      margin-right: oe.rem(-.6);
+      margin-top: oe.rem(-.1);
     }
   }
 
@@ -78,7 +78,7 @@
 
     .ajax-progress-throbber {
       position: relative;
-      left: _rem(-0.6);
+      left: oe.rem(-0.6);
     }
   }
 }

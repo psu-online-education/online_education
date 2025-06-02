@@ -1,17 +1,17 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-datelist {
   & > .form-item__element-wrapper > .form-item__element > .container-inline {
     display: flex;
     flex-wrap: wrap;
-    gap: _rem(1.5);
+    gap: oe.rem(1.5);
 
     & > .form-item {
       margin: 0;
     }
 
     & + .form-item--error-message {
-      margin-top: _rem(1.5);
+      margin-top: oe.rem(1.5);
     }
   }
 }

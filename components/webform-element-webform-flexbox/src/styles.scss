@@ -1,13 +1,12 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
-@import '../../../upstream-components/base/src/scss/imports/layout';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-flexbox {
   display: flex;
-  column-gap: _rem(1.5);
+  column-gap: oe.rem(1.5);
   flex-direction: column;
   margin: 0;
 
-  @include bp(s) {
+  @include oe.bp(s) {
     flex-direction: row;
   }
 

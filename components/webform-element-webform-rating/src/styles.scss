@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-webform-rating {
   & > .form-item__element-wrapper > .form-item__element {
@@ -7,7 +7,7 @@
       visibility: hidden;
 
       ~ .form-item--error-message {
-        margin-top: _rem(.5);
+        margin-top: oe.rem(.5);
       }
     }
 
@@ -19,8 +19,8 @@
       .rateit {
         &-reset {
           -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 31"><path d="m24 31-8-4-8 4a2 2 0 0 1-1 0 2 2 0 0 1-1 0 2 2 0 0 1-1-2l2-9-6-6a2 2 0 0 1 1-4h3l21 16 1 3a2 2 0 0 1-1 2 2 2 0 0 1-1 0 2 2 0 0 1-1 0Zm7-4L1 4a1 1 0 1 1 2-2l8 6 3-7a2 2 0 0 1 4 0l4 8 8 1a2 2 0 0 1 2 2 2 2 0 0 1-1 2l-6 6 8 5a1 1 0 0 1 0 2 1 1 0 0 1-1 0 1 1 0 0 1-1 0Z" color="currentColor"/></svg>') no-repeat;
-          width: _rem(3.2);
-          height: _rem(3.2);
+          width: oe.rem(3.2);
+          height: oe.rem(3.2);
           background: var(--beaver-blue);
           transition: background-color var(--transition-duration--default) linear;
 
@@ -31,9 +31,9 @@
 
         &-range {
           -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M317 18a32 32 0 0 0-58 0l-64 132-144 22a32 32 0 0 0-17 54l104 103-25 146a32 32 0 0 0 47 33l128-68 129 68a32 32 0 0 0 46-33l-24-146 104-103a32 32 0 0 0-18-54l-144-22-64-132z"/></svg>');
-          -webkit-mask-size: _rem(3.2) _rem(3.2);
+          -webkit-mask-size: oe.rem(3.2) oe.rem(3.2);
           background: var(--form-element-background-color);
-          //box-shadow: inset color-mix(in srgb, transparent, var(--slate) 50%) 0 _rem(.2) _rem(.2);
+          //box-shadow: inset color-mix(in srgb, transparent, var(--slate) 50%) 0 oe.rem(.2) oe.rem(.2);
         }
 
         &-selected {
@@ -48,15 +48,15 @@
       &:has(.rateit-reset:focus-visible)::after {
         content: '';
         position: absolute;
-        inset: 0 calc(100% - _rem(3.2)) 0 0;
-        outline: _rem(.2) solid var(--sky-blue);
+        inset: 0 calc(100% - oe.rem(3.2)) 0 0;
+        outline: oe.rem(.2) solid var(--sky-blue);
       }
 
       &:has(.rateit-range:focus-visible)::after {
         content: '';
         position: absolute;
-        inset: 0 0 0 _rem(3.2);
-        outline: _rem(.2) solid var(--sky-blue);
+        inset: 0 0 0 oe.rem(3.2);
+        outline: oe.rem(.2) solid var(--sky-blue);
       }
 
       &:is([data-light] *) {

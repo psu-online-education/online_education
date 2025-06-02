@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-type-fieldset {
   margin-bottom: 0;
@@ -9,10 +9,10 @@
     font-weight: var(--font-weight--medium);
     letter-spacing: var(--letter-spacing--medium);
     line-height: var(--line-height--snug);
-    margin: 0 0 _rem(1.5);
+    margin: 0 0 oe.rem(1.5);
 
     > .fieldset-legend.form-required .form-required-asterisk::after {
-      margin-left: _rem(.5);
+      margin-left: oe.rem(.5);
       font-size: inherit;
     }
   }
@@ -30,7 +30,7 @@
       font-weight: var(--form-label-font-weight);
       font-size: var(--form-label-font-size);
       line-height: var(--form-label-line-height);
-      margin: 0 0 _rem(.5);
+      margin: 0 0 oe.rem(.5);
     }
   }
 }

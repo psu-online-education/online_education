@@ -1,5 +1,4 @@
-@import "../../../upstream-components/base/src/scss/imports/variables";
-@import "../../../upstream-components/base/src/scss/imports/layout";
+@use  '../../../upstream-components/base/src/scss/mixins' as oe;
 .messages {
 
   margin-bottom: var(--text-element-vertical-space--medium);
@@ -13,43 +12,43 @@
   &__list {
     list-style-type: none;
     padding: 0;
-    margin: _rem(1.6) 0;
+    margin: oe.rem(1.6) 0;
   }
 
   &__item {
     color: var(--nittany-navy);
-    margin-bottom: _rem(0.7);
+    margin-bottom: oe.rem(0.7);
     font-weight: var(--font-weight--semibold);
     display: flex;
-    gap: _rem(0.5);
+    gap: oe.rem(0.5);
     line-height: var(--line-height--xsnug);
     .sprite {
       color: var(--medium-dark-grey);
       flex-shrink: 0;
-      font-size: _rem(1.5);
+      font-size: oe.rem(1.5);
     }
     &:last-of-type {
       margin-bottom: 0;
     }
     span {
-      margin-top: _rem(-0.3);
+      margin-top: oe.rem(-0.3);
     }
     a {
       text-decoration: none;
       transition: color .5s;
       display: flex;
-      gap: _rem(0.5);
+      gap: oe.rem(0.5);
 
     }
     span>span {
-      margin-left: _rem(0.5);
+      margin-left: oe.rem(0.5);
     }
 
     a {
       .sprite {
         color: var(--pa-link);
         flex-shrink: 0;
-        font-size: _rem(1.5);
+        font-size: oe.rem(1.5);
       }
       &:hover,
       &:focus {
