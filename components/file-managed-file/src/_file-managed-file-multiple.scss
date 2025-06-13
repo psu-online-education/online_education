@@ -1,7 +1,9 @@
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
+
 .form-type-managed-file-multiple {
   display: flex;
   flex-direction: column;
-  gap: _rem(1.5);
+  gap: oe.rem(1.5);
 
   > .form-file-wrapper {
     width: 100%;
@@ -40,7 +42,7 @@
       border: none;
       cursor: pointer;
       display: inline-block;
-      padding: _rem(1.3) _rem(2.2);
+      padding: oe.rem(1.3) oe.rem(2.2);
       font-family: var(--font-family--default);
       font-size: var(--font-size--small);
       line-height: var(--line-height--2xsnug);
@@ -50,7 +52,7 @@
       transition: background-color var(--transition-duration--default) ease-in-out, color var(--transition-duration--default) ease-in-out;
       text-align: center;
       color: var(--text-color--light);
-      outline-offset: _rem(-.5);
+      outline-offset: oe.rem(-.5);
       width: min-content;
 
       &:focus {
@@ -58,8 +60,8 @@
       }
 
       &:focus-visible {
-        outline: _rem(.2) solid var(--sky-blue);
-        outline-offset: _rem(.2);
+        outline: oe.rem(.2) solid var(--sky-blue);
+        outline-offset: oe.rem(.2);
       }
 
       &, &:is([data-light] *) {

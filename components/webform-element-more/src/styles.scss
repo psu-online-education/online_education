@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-element-more {
 
@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    gap: _rem(1);
+    gap: oe.rem(1);
     color: var(--form-element-webform-more-color);
     font-size: var(--font-size--small);
     line-height: var(--line-height--xsnug);
@@ -20,7 +20,7 @@
 
     .sprite {
       transition: transform var(--transition-duration--default) linear;
-      font-size: _rem(2);
+      font-size: oe.rem(2);
       flex-shrink: 0;
     }
 
@@ -31,8 +31,8 @@
 
   &--content {
     display: none;
-    margin-top: _rem(1);
-    margin-left: _rem(3);
+    margin-top: oe.rem(1);
+    margin-left: oe.rem(3);
 
     &, p {
       color: var(--form-label-text-color);

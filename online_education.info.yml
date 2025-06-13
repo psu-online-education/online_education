@@ -1,4 +1,4 @@
-name: "Outreach and Online Education Base Theme"
+name: "Online Education Base Theme"
 type: theme
 core_version_requirement: ^10 || ^11
 base theme: false

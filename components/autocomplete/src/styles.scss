@@ -1,7 +1,7 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .ui-menu {
-  border-top: _rem(.1) solid var(--white);
+  border-top: oe.rem(.1) solid var(--white);
   background-color: var(--form-element-background-color);
   padding: var(--form-element-padding--horizontal);
   position: absolute;
@@ -12,7 +12,7 @@
 
   &-item-wrapper {
     display: block;
-    padding: _rem(.5) _rem(1);
+    padding: oe.rem(.5) oe.rem(1);
     font-family: var(--form-element-font-family);
     font-weight: var(--form-element-font-weight);
     color: var(--form-element-text-color);

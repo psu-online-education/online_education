@@ -1,5 +1,5 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
-@import 'file-managed-file';
-@import 'file-managed-file-button';
-@import 'file-managed-file-multiple';
+@use 'file-managed-file';
+@use 'file-managed-file-button';
+@use 'file-managed-file-multiple';

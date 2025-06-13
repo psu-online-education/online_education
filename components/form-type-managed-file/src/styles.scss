@@ -1,11 +1,11 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-managed-file {
   .form-file-wrapper {
 
     &:has(> *:focus-visible) {
-      outline: _rem(.2) solid var(--sky-blue);
-      outline-offset: _rem(.2);
+      outline: oe.rem(.2) solid var(--sky-blue);
+      outline-offset: oe.rem(.2);
 
       > *:focus-visible {
         outline: none;

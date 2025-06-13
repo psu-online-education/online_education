@@ -1,16 +1,16 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-type-webform-term-checkboxes {
 
   > legend {
-    margin-bottom: _rem(.5);
+    margin-bottom: oe.rem(.5);
   }
 
   > .fieldset-wrapper {
 
     > .form-type-checkboxes {
       & + .form-item__description {
-        margin-top: _rem(.5);
+        margin-top: oe.rem(.5);
       }
 
       // Term checkboxes can render a prefix to indent hierarchical options. In
@@ -21,7 +21,7 @@
     }
 
     > .form-item--error-message {
-      margin-top: _rem(1.5);
+      margin-top: oe.rem(1.5);
     }
   }
 
@@ -29,13 +29,13 @@
     > .fieldset-wrapper {
       > .form-type-checkboxes {
         overflow: auto;
-        max-height: _rem(18);
-        padding: _rem(1);
-        border: _rem(.1) solid var(--form-element-border-color);
+        max-height: oe.rem(18);
+        padding: oe.rem(1);
+        border: oe.rem(.1) solid var(--form-element-border-color);
       }
 
       > .form-item--error-message {
-        margin-top: _rem(0);
+        margin-top: oe.rem(0);
       }
     }
 

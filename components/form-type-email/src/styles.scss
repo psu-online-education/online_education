@@ -1,4 +1,4 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .form-type-email {
   > .form-item__element-wrapper > .form-item__element {
@@ -8,7 +8,7 @@
       position: absolute;
       inset: 0 var(--form-element-padding--horizontal) 0 auto;
       // .4rem = spinner height / 4.
-      padding: calc(var(--form-element-padding--vertical) - _rem(.4)) 0;
+      padding: calc(var(--form-element-padding--vertical) - oe.rem(.4)) 0;
     }
 
     > input ~ .form-item--warning-message {
@@ -16,7 +16,7 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: _rem(1);
+        gap: oe.rem(1);
         position: relative;
         font-family: var(--font-family--text);
         font-size: var(--font-size--4xsmall);

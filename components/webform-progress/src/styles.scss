@@ -1,11 +1,11 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .webform-progress {
   margin-bottom: var(--webform-progress-tracker-margin--vertical);
 
   &__status {
     display: flex;
-    gap: _rem(1);
+    gap: oe.rem(1);
     align-items: center;
     justify-content: space-between;
   }

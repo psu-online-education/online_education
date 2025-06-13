@@ -1,10 +1,10 @@
-@import '../../../upstream-components/base/src/scss/imports/variables';
+@use '../../../upstream-components/base/src/scss/mixins' as oe;
 
 .fieldgroup {
 
   > legend > .fieldset-legend {
     display: flex;
-    gap: _rem(.5);
+    gap: oe.rem(.5);
   }
 
   > .fieldset-wrapper {
@@ -14,11 +14,11 @@
     }
 
     > .field-prefix {
-      margin-bottom: _rem(.5);
+      margin-bottom: oe.rem(.5);
     }
 
     > .field-suffix {
-      margin-top: _rem(.5);
+      margin-top: oe.rem(.5);
     }
   }
 }

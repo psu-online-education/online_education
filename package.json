@@ -1,7 +1,7 @@
 {
   "name": "@psu-online-education/online-education",
   "version": "1.0.0",
-  "description": "Outreach and Online Education Drupal Base Theme",
+  "description": "Online Education Drupal Base Theme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psu-online-education/online_education.git"
@@ -19,7 +19,7 @@
     "@psu-online-education/auto-expansion": "*",
     "@psu-online-education/background-container": "*",
     "@psu-online-education/band": "*",
-    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/basic-tile": "*",
     "@psu-online-education/bio": "*",
     "@psu-online-education/bio-collection": "*",
@@ -73,9 +73,9 @@
     "@psu-online-education/navigation-tile": "*",
     "@psu-online-education/navigation-tile-image": "*",
     "@psu-online-education/overlay": "*",
+    "@psu-online-education/page-title": "*",
     "@psu-online-education/page-title-banner-image": "*",
     "@psu-online-education/page-title-banner-plain": "*",
-    "@psu-online-education/page-title": "*",
     "@psu-online-education/pager": "*",
     "@psu-online-education/parallel-navigation": "*",
     "@psu-online-education/parallel-navigation-item": "*",
@@ -92,6 +92,7 @@
     "@psu-online-education/spinner": "*",
     "@psu-online-education/sprite": "*",
     "@psu-online-education/sticky-panel": "*",
+    "@psu-online-education/table": "*",
     "@psu-online-education/tabs": "*",
     "@psu-online-education/textarea": "*",
     "@psu-online-education/upcoming-events": "*",
@@ -108,7 +109,7 @@
     "fs-extra": "^11.0.0",
     "sass": "^1.59.3",
     "stylelint": "^16.5.0",
-    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-scss": "^6.3.0",
     "uglify-js": "^3.17.4"
   }
