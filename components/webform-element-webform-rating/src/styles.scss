@@ -33,7 +33,6 @@
           -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M317 18a32 32 0 0 0-58 0l-64 132-144 22a32 32 0 0 0-17 54l104 103-25 146a32 32 0 0 0 47 33l128-68 129 68a32 32 0 0 0 46-33l-24-146 104-103a32 32 0 0 0-18-54l-144-22-64-132z"/></svg>');
           -webkit-mask-size: oe.rem(3.2) oe.rem(3.2);
           background: var(--form-element-background-color);
-          //box-shadow: inset color-mix(in srgb, transparent, var(--slate) 50%) 0 oe.rem(.2) oe.rem(.2);
         }
 
         &-selected {
