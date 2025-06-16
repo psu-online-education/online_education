@@ -6,7 +6,7 @@
  */
 (($, Drupal, drupalSettings) => {
 
-  Drupal.theme.ajaxProgressThrobber = () => `<span class="ajax-progress-throbber">${drupalSettings.onlineEducation.spinner_component}</span>`;
+  Drupal.theme.ajaxProgressThrobber = () => `<span class="ajax-progress-throbber">${drupalSettings.online_education.spinner_component}</span>`;
 
   Drupal.Ajax.prototype.setProgressIndicatorThrobber = function() {
     this.progress.element = $(Drupal.theme('ajaxProgressThrobber'));
