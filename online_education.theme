@@ -83,7 +83,7 @@ function online_education_library_info_build(): array {
  */
 function online_education_js_settings_alter(array &$settings): void {
 
-  if (array_key_exists('onlineEducation', $settings) && array_key_exists('spinner_component', $settings['onlineEducation'])) {
+  if (array_key_exists('online_education', $settings) && array_key_exists('spinner_component', $settings['online_education'])) {
     $spinner = [
       '#type' => 'inline_template',
       '#template' => <<<TEMPLATE
@@ -93,7 +93,7 @@ function online_education_js_settings_alter(array &$settings): void {
       } only %}
     TEMPLATE,
     ];
-    $settings['onlineEducation']['spinner_component'] = \Drupal::service('renderer')->renderPlain($spinner);
+    $settings['online_education']['spinner_component'] = \Drupal::service('renderer')->renderPlain($spinner);
   }
 }
 
