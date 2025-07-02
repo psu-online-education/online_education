@@ -183,6 +183,7 @@ file-managed-file:
     - online_education/form-item
     - online_education/input-file
     - online_education/status-messages
+    - webform/webform.element.managed_file
     - core/drupal
     - core/once
 
