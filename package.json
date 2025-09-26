@@ -79,6 +79,7 @@
     "@psu-online-education/pager": "*",
     "@psu-online-education/parallel-navigation": "*",
     "@psu-online-education/parallel-navigation-item": "*",
+    "@psu-online-education/physical-address": "^1.0.1",
     "@psu-online-education/quote": "*",
     "@psu-online-education/random-item": "*",
     "@psu-online-education/read-more": "*",
